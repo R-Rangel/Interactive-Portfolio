@@ -1,0 +1,89 @@
+/* Your existing CSS styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    font-family: 'MedievalSharp', cursive;
+  }
+  
+  body {
+    background: black; /* Set initial background color to black */
+  }
+  
+  .gif-container.fade-in {
+    background: none; /* Remove the background when it has the fade-in class */
+    animation: fadeIn 1s ease; /* Apply the animation to the displayed content */
+  }
+  
+  .gif-container {
+    background: none; /* Set initial background to none */
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #movingButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: 'MedievalSharp', cursive;
+    width: 50px; /* Adjust the width and height to your preference */
+    height: 50px;
+    border-radius: 50%; /* Makes the button a circle */
+  }
+  
+  #movingButton {
+    /* Existing styles */
+    transition: all 0.3s ease; /* Adds a smooth transition effect */
+  }
+  
+  .content-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+  }
+  
+  .content-container.fade-in {
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* New styles for the d20 die button */
+  .d20-die {
+    background-color: purple;
+    background-image: linear-gradient(45deg, purple, darkmagenta);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .d20-die:hover {
+    filter: brightness(110%);
+  }
+  
+  .d20-die:active {
+    filter: brightness(90%);
+  }
+  
